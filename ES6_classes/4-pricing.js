@@ -1,4 +1,5 @@
 import Currency from "./3-currency";
+
 export default class Pricing {
   constructor(amount, currency) {
     if (typeof amount !== 'number') {
@@ -31,7 +32,7 @@ export default class Pricing {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
-  convertPrice(amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
 }
