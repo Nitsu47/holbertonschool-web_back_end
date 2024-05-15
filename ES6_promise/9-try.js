@@ -3,8 +3,7 @@ export default function guardrail(mathFunction) {
   try {
     const value = mathFunction();
     queue.push(value);
-  }
-  catch(error) {
+  } catch (error) {
     queue.push(error.toString());
   }
   queue.push('Guardrail was processed');
