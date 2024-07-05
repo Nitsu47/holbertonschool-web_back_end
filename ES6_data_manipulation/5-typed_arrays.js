@@ -1,0 +1,11 @@
+export default function createInt8TypedArray(lenght, position, value) {
+
+  if (position > length) {
+    throw new Error ("Position outside range");
+  }    
+  const buffArr = new ArrayBuffer(lenght);
+  const editor = new(buffArr);
+  editor.setInt8(position, value);
+
+  return editor;
+}
